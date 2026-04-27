@@ -5,3 +5,6 @@ PROBAR en la parte superior. El diseño debe ser responsive. No usar JavaScript.
 
 Prompt 2
 Mejora el diseño dándole un estilo tecnológico.
+
+Prompt 3
+Agregar una caja de texto manteniendo el estilo de la página. 

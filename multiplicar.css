@@ -152,3 +152,57 @@ h1 {
     .btn-tech { padding: 10px 20px; font-size: 0.8rem; }
     .tech-table th, .tech-table td { padding: 10px; }
 }
+
+/* Grupo de entrada de datos */
+.input-group {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-right: 20px;
+}
+
+.input-label {
+    font-family: var(--font-header);
+    font-size: 0.75rem;
+    color: var(--neon-cyan);
+    letter-spacing: 1px;
+}
+
+/* Caja de texto Estilo Tech */
+.tech-input {
+    background: rgba(0, 242, 255, 0.05);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--neon-cyan); /* Acento lateral */
+    color: var(--neon-cyan);
+    font-family: var(--font-data);
+    padding: 10px 15px;
+    outline: none;
+    width: 80px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+    border-radius: 2px;
+}
+
+.tech-input:focus {
+    border-color: var(--neon-cyan);
+    box-shadow: 0 0 15px rgba(0, 242, 255, 0.3);
+    background: rgba(0, 242, 255, 0.1);
+}
+
+/* Quitar las flechas por defecto del input number (opcional) */
+.tech-input::-webkit-inner-spin-button, 
+.tech-input::-webkit-outer-spin-button { 
+    -webkit-appearance: none; 
+    margin: 0; 
+}
+
+/* Ajuste responsive para móviles */
+@media (max-width: 500px) {
+    .main-header {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .input-group {
+        margin-right: 0;
+    }
+}
