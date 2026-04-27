@@ -32,12 +32,15 @@ body {
 
 /* Header y Botón */
 .main-header {
-    padding: 30px;
     display: flex;
-    justify-content: flex-start; /* Esto mueve todo a la izquierda */
-    align-items: center;         /* Mantiene los elementos centrados verticalmente entre sí */
-    gap: 20px;                   /* Espacio entre el grupo del input y el botón */
+    justify-content: flex-start;
+    align-items: center;
+    gap: 15px;
     border-bottom: 1px solid var(--border-color);
+    width: 100%;
+    max-width: 400px; /* Reducido de 600px a 400px */
+    margin: 0 auto 20px auto;
+    padding: 10px 0;
 }
 
 .btn-tech {
@@ -64,19 +67,21 @@ body {
 .viewport {
     flex: 1;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column; /* Cambiamos a columna para que el header esté arriba y la tabla abajo */
+    align-items: center;    /* Centra ambos bloques horizontalmente en la pantalla */
     padding: 20px;
 }
 
 .data-frame {
-    width: 100%;
-    max-width: 600px;
-    background: var(--panel-bg);
+    background: rgba(2, 12, 27, 0.8);
     border: 1px solid var(--border-color);
-    border-radius: 4px;
+    width: 100%;
+    max-width: 400px; /* Coincide con el header para que queden alineados */
+    margin: 0 auto;
+    padding: 15px;    /* Reducimos el espacio interno para que se vea más pequeña */
+    box-shadow: 0 0 20px rgba(0, 242, 255, 0.1);
     position: relative;
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
 }
 
 .frame-header {
@@ -207,4 +212,41 @@ h1 {
     .input-group {
         margin-right: 0;
     }
+}
+
+/* Contenedor de las filas */
+#contenedor-tabla {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
+}
+
+/* Fila que contiene las dos cápsulas */
+.result-row {
+    display: flex;
+    gap: 20px;
+    width: 100%;
+}
+
+/* Estilo exacto a la imagen: Cápsulas */
+.capsule {
+    flex: 1;
+    background: rgba(16, 32, 26, 0.6); /* Fondo oscuro verdoso */
+    border: 1.5px solid #2ecc71;      /* Borde verde esmeralda */
+    color: #ffffff;                    /* Texto blanco para legibilidad */
+    padding: 15px;
+    border-radius: 50px;              /* Bordes totalmente redondeados */
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-weight: bold;
+    font-size: 1.1rem;
+    box-shadow: 0 0 15px rgba(46, 204, 113, 0.2); /* Resplandor suave verde */
+    transition: all 0.3s ease;
+}
+
+.capsule:hover {
+    background: rgba(46, 204, 113, 0.1);
+    box-shadow: 0 0 25px rgba(46, 204, 113, 0.4);
+    transform: translateY(-2px);
 }

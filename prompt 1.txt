@@ -11,3 +11,6 @@ Agregar una caja de texto manteniendo el estilo de la página.
 
 Prompt 4
 modifica el estilo, el texto ingrese un número, la caja para colocar el número y el botón probar colócalo al lado izquierdo. 
+
+Prompt 5
+En la ventana de resultados colocar 2 columnas. Ejemplo:Primera columna: 3x1=3, 3x3=9, 3x5=15, 3x7=21, 3x9=27; Segunda columna: 3x2=6, 3x4=12, 3x6=18, 3x8=24, 3x10=30. Que cada resultada este en una ventana. Mantén el diseño actual.
