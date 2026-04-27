@@ -9,25 +9,37 @@
 }
 
 body {
-    background-color: var(--dark-bg);
-    color: #e0faff;
-    font-family: var(--font-data);
     margin: 0;
+    padding: 0;
+    background-color: #000000; 
+
+    /* REJILLA REFORZADA */
+    background-image: 
+        /* Rejilla principal (más marcada) */
+        linear-gradient(rgba(0, 242, 255, 0.15) 1.5px, transparent 1.5px),
+        linear-gradient(90deg, rgba(0, 242, 255, 0.15) 1.5px, transparent 1.5px),
+        /* Rejilla secundaria (más fina para detalle) */
+        linear-gradient(rgba(0, 242, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0, 242, 255, 0.05) 1px, transparent 1px);
+    
+    background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
+    
+    color: #ffffff;
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    overflow-x: hidden;
 }
 
 /* Efecto de fondo tecnológico */
 .background-overlay {
     position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background-image: 
-        linear-gradient(rgba(0, 242, 255, 0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(0, 242, 255, 0.03) 1px, transparent 1px);
-    background-size: 30px 30px;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: radial-gradient(circle at 50% 50%, #050505 0%, #000000 100%);
     z-index: -1;
+    opacity: 0.8;
 }
 
 /* Header y Botón */
@@ -41,6 +53,7 @@ body {
     max-width: 400px; /* Reducido de 600px a 400px */
     margin: 0 auto 20px auto;
     padding: 10px 0;
+    margin-bottom: 10px;
 }
 
 .btn-tech {
@@ -67,9 +80,12 @@ body {
 .viewport {
     flex: 1;
     display: flex;
-    flex-direction: column; /* Cambiamos a columna para que el header esté arriba y la tabla abajo */
-    align-items: center;    /* Centra ambos bloques horizontalmente en la pantalla */
-    padding: 20px;
+    flex-direction: column;
+    align-items: center;
+    
+    /* CAMBIOS AQUÍ: Reducimos el espacio superior */
+    padding-top: 20px;     
+    justify-content: flex-start; 
 }
 
 .data-frame {
@@ -249,4 +265,39 @@ h1 {
     background: rgba(46, 204, 113, 0.1);
     box-shadow: 0 0 25px rgba(46, 204, 113, 0.4);
     transform: translateY(-2px);
+}
+
+.section-title {
+    width: 100%;
+    max-width: 400px; /* Misma medida que tu data-frame para que coincidan */
+    text-align: left;
+    margin-top: 0;         
+    margin-bottom: 8px;    
+    font-family: 'Orbitron', sans-serif;
+    color: var(--neon-cyan); /* O el verde esmeralda si lo prefieres */
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    
+}
+
+footer {
+    width: 100%;
+    padding: 20px 0;
+    margin-top: auto; 
+    text-align: center; 
+    border-top: 1px solid rgba(0, 242, 255, 0.1); 
+}
+
+footer p {
+    font-family: 'Roboto Mono', monospace;
+    color: rgba(255, 255, 255, 0.5); 
+    font-size: 0.75rem; 
+    margin: 5px 0;     
+    letter-spacing: 1px;
+    text-transform: uppercase; 
+}
+
+footer p strong {
+    color: var(--neon-cyan); 
 }
