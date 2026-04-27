@@ -7,4 +7,7 @@ Prompt 2
 Mejora el diseño dándole un estilo tecnológico.
 
 Prompt 3
-Agregar una caja de texto manteniendo el estilo de la página. 
+Agregar una caja de texto manteniendo el estilo de la página.
+
+Prompt 4
+modifica el estilo, el texto ingrese un número, la caja para colocar el número y el botón probar colócalo al lado izquierdo. 

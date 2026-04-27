@@ -34,7 +34,9 @@ body {
 .main-header {
     padding: 30px;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; /* Esto mueve todo a la izquierda */
+    align-items: center;         /* Mantiene los elementos centrados verticalmente entre sí */
+    gap: 20px;                   /* Espacio entre el grupo del input y el botón */
     border-bottom: 1px solid var(--border-color);
 }
 
