@@ -52,8 +52,8 @@ body {
     width: 100%;
     max-width: 400px; /* Reducido de 600px a 400px */
     margin: 0 auto 20px auto;
-    padding: 10px 0;
-    margin-bottom: 10px;
+    padding: 5px 0;
+    margin-bottom: 0.5px;
     padding-left: 50px;
 }
 
@@ -276,7 +276,7 @@ h1 {
 .section-title {
     width: 100%;
     max-width: 400px; /* Misma medida que tu data-frame para que coincidan */
-    text-align: left;
+    text-align: center;
     margin-top: 0;         
     margin-bottom: 8px;    
     font-family: 'Orbitron', sans-serif;
@@ -357,8 +357,8 @@ footer p strong {
 .content-container {
     display: flex;
     align-items: center;    /* Centra la imagen verticalmente respecto a la ventana */
-    justify-content: flex-start; /* Centra ambos elementos en el medio de la pantalla */
-    padding-left: 80px;
+    justify-content: center; /* Centra ambos elementos en el medio de la pantalla */
+    
     gap: 30px;              /* Espacio de separación entre la imagen y la ventana */
     width: 100%;
     margin-top: 20px;
