@@ -21,9 +21,9 @@ body {
         /* Rejilla secundaria (más fina para detalle) */
         linear-gradient(rgba(0, 242, 255, 0.05) 1px, transparent 1px),
         linear-gradient(90deg, rgba(0, 242, 255, 0.05) 1px, transparent 1px);
-    
+        
     background-size: 50px 50px, 50px 50px, 10px 10px, 10px 10px;
-    
+        
     color: #ffffff;
     min-height: 100vh;
     display: flex;
@@ -54,6 +54,7 @@ body {
     margin: 0 auto 20px auto;
     padding: 10px 0;
     margin-bottom: 10px;
+    padding-left: 50px;
 }
 
 .btn-tech {
@@ -91,13 +92,17 @@ body {
 .data-frame {
     background: rgba(2, 12, 27, 0.8);
     border: 1px solid var(--border-color);
-    width: 100%;
+    width: 95%;
     max-width: 400px; /* Coincide con el header para que queden alineados */
     margin: 0 auto;
     padding: 15px;    /* Reducimos el espacio interno para que se vea más pequeña */
     box-shadow: 0 0 20px rgba(0, 242, 255, 0.1);
     position: relative;
     overflow: hidden;
+    margin-bottom: 10px;
+
+    margin: 0;              /* Quitamos el margin auto para que flex trabaje mejor */
+    min-width: 400px;
 }
 
 .frame-header {
@@ -181,7 +186,7 @@ h1 {
     display: flex;
     align-items: center;
     gap: 15px;
-    margin-right: 20px;
+    margin-right: 20px; 
 }
 
 .input-label {
@@ -234,30 +239,31 @@ h1 {
 #contenedor-tabla {
     display: flex;
     flex-direction: column;
-    gap: 15px;
-    padding: 20px;
+    gap: 20px;       /* Aumentamos el espacio vertical entre cada par de cápsulas */
+    padding: 25px 25px 10px 25px;   /* Más aire respecto a los bordes de la ventana principal */
 }
 
 /* Fila que contiene las dos cápsulas */
 .result-row {
     display: flex;
-    gap: 20px;
+    gap: 25px;       /* Espacio horizontal entre la cápsula impar y la par */
     width: 100%;
 }
 
 /* Estilo exacto a la imagen: Cápsulas */
 .capsule {
     flex: 1;
-    background: rgba(16, 32, 26, 0.6); /* Fondo oscuro verdoso */
-    border: 1.5px solid #2ecc71;      /* Borde verde esmeralda */
-    color: #ffffff;                    /* Texto blanco para legibilidad */
-    padding: 15px;
-    border-radius: 50px;              /* Bordes totalmente redondeados */
+    padding: 18px;   /* Hace que la cápsula sea un poco más robusta y el texto no toque los bordes */
+    
+    /* Mantenemos tus estilos anteriores */
+    background: rgba(16, 32, 26, 0.6);
+    border: 1.5px solid #2ecc71;
+    color: #ffffff;
+    border-radius: 50px;
     text-align: center;
     font-family: 'Roboto Mono', monospace;
     font-weight: bold;
-    font-size: 1.1rem;
-    box-shadow: 0 0 15px rgba(46, 204, 113, 0.2); /* Resplandor suave verde */
+    box-shadow: 0 0 15px rgba(46, 204, 113, 0.2);
     transition: all 0.3s ease;
 }
 
@@ -275,8 +281,9 @@ h1 {
     margin-bottom: 8px;    
     font-family: 'Orbitron', sans-serif;
     color: var(--neon-cyan); /* O el verde esmeralda si lo prefieres */
-    font-size: 0.8rem;
-    letter-spacing: 2px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    letter-spacing: 3px;
     text-transform: uppercase;
     
 }
@@ -300,4 +307,68 @@ footer p {
 
 footer p strong {
     color: var(--neon-cyan); 
+}
+
+.brand-logo {
+    height: 40px;        
+    width: auto;         
+    filter: brightness(1.2); 
+    object-fit: contain;
+}
+
+.error-msg {
+    width: 90%;             /* No ocupa todo el ancho para no pegar a los bordes */
+    max-width: 350px;       /* Evita que se estire demasiado */
+    margin: 20px auto;      /* Centra el bloque mismo */
+    padding: 20px;
+    background: rgba(255, 68, 68, 0.05); 
+    border: 1px dashed #ff4444;
+    color: #ff4444;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    text-align: center;     /* Centra el texto dentro de la caja */
+    border-radius: 12px;
+    box-shadow: 0 0 15px rgba(255, 68, 68, 0.1);
+}
+
+.info-welcome {
+    width: 90%;
+    max-width: 380px;
+    margin: 30px auto;
+    padding: 20px;
+    background: rgba(0, 242, 255, 0.03); /* Un azul cian muy suave */
+    border: 1px solid rgba(0, 242, 255, 0.2);
+    border-left: 4px solid var(--neon-cyan); /* Detalle de terminal */
+    color: var(--neon-cyan);
+    font-family: 'Roboto Mono', monospace;
+    font-size: 0.85rem;
+    line-height: 1.6;
+    text-align: center;
+    border-radius: 4px;
+}
+
+.info-welcome p:first-child {
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.content-container {
+    display: flex;
+    align-items: center;    /* Centra la imagen verticalmente respecto a la ventana */
+    justify-content: flex-start; /* Centra ambos elementos en el medio de la pantalla */
+    padding-left: 80px;
+    gap: 30px;              /* Espacio de separación entre la imagen y la ventana */
+    width: 100%;
+    margin-top: 20px;
+}
+
+/* Estilo para la imagen del lado izquierdo */
+.side-image {
+    width: 350px;           /* Ajusta el ancho según el tamaño de tu imagen */
+    height: auto;
+    filter: brightness(0.1) grayscale(0.2);           /* Mantiene la proporción */
+    border-radius: 10px;    /* Opcional: bordes redondeados */
+    filter: drop-shadow(0 0 10px rgba(0, 242, 255, 0.2)); /* Opcional: brillo neón */
 }

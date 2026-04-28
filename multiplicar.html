@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Interface v3.0 - Generador de Tablas</title>
     <link rel="stylesheet" href="multiplicar.css">
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@300;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Roboto+Mono:wght@300;500&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
 
     <div class="background-overlay"></div>
 
     <header class="main-header">
         <div class="input-group">
+            <img src="logo Casio.jpg" alt="Casio Logo" class="brand-logo">
             <label for="numero-tabla" class="input-label">INGRESE UN NÚMERO:</label>
             <input type="number" id="numero-tabla" class="tech-input" placeholder="0" min="1" max="99">
         </div>
@@ -21,17 +26,23 @@
 
     <main class="viewport">
         <p class="section-title">Generador de tablas</p>
-        <div class="data-frame">
-            <div class="frame-header">
-                <span class="status-indicator"></span>
-                <h1 id="titulo-tabla">TABLA</h1>
-            </div>
+        <div class="content-container">
 
-            <div id="contenedor-tabla">
+            <img src="casioed.png" alt="Decoración Izquierda" class="side-image">
+            <div class="data-frame">
+                <div class="frame-header">
+                    <span class="status-indicator"></span>
+                    <h1 id="titulo-tabla">TABLA</h1>
                 </div>
 
+                <div id="contenedor-tabla">
+                    <div id="mensaje-bienvenida" class="info-welcome">
+                        <p>ESPERANDO ACCIÓN DEL USUARIO...</p>
+                        <p>Ingrese un número y presione PROBAR para generar la tabla de multiplicar.</p>
+                    </div>
+
+                </div>
             </div>
-        </div>
     </main>
 
     <script src="multiplicar.js"></script>
@@ -41,4 +52,5 @@
         <p>Contenido con fines didácticos</p>
     </footer>
 </body>
+
 </html>

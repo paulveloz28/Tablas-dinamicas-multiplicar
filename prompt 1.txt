@@ -23,3 +23,8 @@ Quiero que estos textos queden alineados y centrados y bajen el tamaño de la le
 
 Prompt 8
 Modifica el estilo del ejercicio, colocale un color negro en el fondo.
+
+Prompt 9
+Coloca una imagen al lado izquierdo a lado de la ventana de resultados. 
+
+

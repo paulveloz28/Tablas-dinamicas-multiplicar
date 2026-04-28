@@ -4,7 +4,12 @@ function generarTablas() {
     let factor = document.getElementById("numero-tabla").value;
 
     if (factor === "") {
-        alert("Por favor, ingresa un número.");
+        titulo.innerText = "SISTEMA_ERROR";
+        contenedor.innerHTML = `
+            <div class="error-msg">
+                
+                > ERROR, INGRESE UN NÚMERO PARA CONTINUAR...
+            </div>`;
         return;
     }
 
